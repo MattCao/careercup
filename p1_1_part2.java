@@ -19,7 +19,7 @@
 			charMap[index] = true;
 		}
 		return true;
-	/* Use the charAt[] function constant access
+	/* Use the charAt[] function contstant access
 	 */
 	public static boolean uniqueCheck_B(string str) {
 		if (str == null) {
