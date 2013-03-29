@@ -17,7 +17,7 @@ public class p1_6 {
     public static void main (String args[]) {
         Invert example = new Invert ();
         int[][] original = {{1,2,3,4,5},{5,6,7,8,9},{9,10,11,12,10},{13,14,15,16,17},{18,19,20,21,22}};
-        int[][] newOne = example.rotate(original);
+        int[][] newOne = example.rotateNew(original);
         for(int i = 0; i < newOne.length; i++) {
             for(int j = 0; j < newOne[i].length; j++) {
                 System.out.print(newOne[i][j] + "\t");
@@ -37,5 +37,18 @@ class Invert{
             }
         }
         return newOne;
+    }
+
+    public int[][] rotateNew(int[][] matrix) {
+    	for (int i = 0; i < matrix.length / 2; i++) {
+			for (int j = i; j < matrix.length - i - 1; j++) {
+				int tmp = matrix[i][j];
+				matrix[i][j] = matrix[matrix.length - 1 - j][i];
+				matrix[matrix.length - 1 - j][i] = matrix[matrix.length - 1 - i][matrix.length - 1 - j];
+				matrix[matrix.length - 1 - i][matrix.length - 1 - j] = matrix[j][matrix.length - 1 - i];
+				matrix[j][matrix.length - 1 - i] = tmp;
+			}
+		}
+
     }
 }
