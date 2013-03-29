@@ -50,5 +50,6 @@ class Invert{
 			}
 		}
 
+		return matrix;
     }
 }
