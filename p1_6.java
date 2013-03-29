@@ -49,7 +49,6 @@ class Invert{
 				matrix[j][matrix.length - 1 - i] = tmp;
 			}
 		}
-
 		return matrix;
     }
 }
