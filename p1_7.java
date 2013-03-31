@@ -10,7 +10,7 @@
  * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
  * My idea:
  * the idea is just checking the validation of each rows and columns firstly, then check the validation and change then 
- * correspondingly. Time: M*N, space (M + N)
+ * correspondingly. Time: M*N, space (M + N  )
  */
 public class p1_7 {
     public static void main (String args[]) {
